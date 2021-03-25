@@ -1,0 +1,13 @@
+{
+    "name": "tanjarlan/omnipay-cmbpay",
+    "description": "Cmb gateway for Omnipay payment processing library",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tanjarlan",
+            "email": "410536770@qq.com"
+        }
+    ],
+    "require": {}
+}
