@@ -1,6 +1,19 @@
 {
     "name": "tanjarlan/omnipay-cmbpay",
     "description": "Cmb gateway for Omnipay payment processing library",
+    "keywords": [
+        "cmb",
+        "gateway",
+        "php",
+        "omnipay",
+        "pay",
+        "sdk",
+        "app",
+        "payment",
+        "purchase",
+        "招行支付",
+        "招商银行"
+    ],
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -9,5 +22,15 @@
             "email": "410536770@qq.com"
         }
     ],
-    "require": {}
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\CmbPay\\": "src/"
+        }
+    },
+    "require": {
+        "omnipay/common": "^3.0"
+    },
+    "require-dev": {
+        "omnipay/tests": "^3.0"
+    }
 }
