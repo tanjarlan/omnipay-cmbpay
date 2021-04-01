@@ -28,7 +28,8 @@
         }
     },
     "require": {
-        "omnipay/common": "^3.0"
+        "omnipay/common": "^3.0",
+        "php-http/guzzle7-adapter": "*"
     },
     "require-dev": {
         "omnipay/tests": "^3.0"
