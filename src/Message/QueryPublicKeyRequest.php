@@ -49,4 +49,12 @@ class QueryPublicKeyRequest extends \Omnipay\CmbPay\Support\BaseAbstractRequest
 
         return $this->response = new QueryPublicKeyResponse($this, $response);
     }
+
+    /**
+     * @return array
+     */
+    protected function getOptionalParameterKeys(): array
+    {
+        return [];
+    }
 }
