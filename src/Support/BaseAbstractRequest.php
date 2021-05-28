@@ -105,6 +105,8 @@ abstract class BaseAbstractRequest extends AbstractRequest
     }
 
     /**
+     * 获取可选参数
+     *
      * @return array
      */
     protected function getOptionalParameters(): array

@@ -43,6 +43,7 @@ class Helper
         }
 
         ///
+        ksort($data);
         $strToSign = urldecode(http_build_query($data));
         $ok = openssl_verify($strToSign, base64_decode($sign), $publicKeyId, OPENSSL_ALGO_SHA1);
         return $ok == 1;

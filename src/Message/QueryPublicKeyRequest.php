@@ -5,7 +5,6 @@ namespace Omnipay\CmbPay\Message;
 
 
 use Omnipay\CmbPay\Support\Helper;
-use Omnipay\Common\Message\ResponseInterface;
 
 class QueryPublicKeyRequest extends \Omnipay\CmbPay\Support\BaseAbstractRequest
 {
@@ -48,5 +47,13 @@ class QueryPublicKeyRequest extends \Omnipay\CmbPay\Support\BaseAbstractRequest
         $response = $this->sendRequest('POST', $this->endpoint, $data)->getBody()->getContents();
 
         return $this->response = new QueryPublicKeyResponse($this, $response);
+    }
+
+    /**
+     * @return array
+     */
+    protected function getOptionalParameterKeys() :array
+    {
+        return [];
     }
 }

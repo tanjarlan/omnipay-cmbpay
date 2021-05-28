@@ -187,7 +187,6 @@ class CreateH5OrderRequest extends \Omnipay\CmbPay\Support\BaseAbstractRequest
         return [
             'returnUrl',
             'payNoticePara',
-            'returnUrl',
             'clientIP',
             'cardType',
             'agrNo',

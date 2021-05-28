@@ -41,7 +41,7 @@ class RefundRequest extends \Omnipay\CmbPay\Support\BaseAbstractRequest
             'dateTime' => date('YmdHis'),
             'branchNo' => $this->getBranchNo(),
             'merchantNo' => $this->getMerchantNo(),
-            'date' => date('Ymd'),
+            'date' => $this->getDate(),
             'orderNo' => $this->getOrderNo(),
             'refundSerialNo' => $this->getRefundSerialNo(),
             'amount' => $this->getAmount()
@@ -78,5 +78,15 @@ class RefundRequest extends \Omnipay\CmbPay\Support\BaseAbstractRequest
     protected function getOptionalParameterKeys(): array
     {
         return [];
+    }
+
+    public function setDate($date)
+    {
+        $this->setParameter('date', $date);
+    }
+
+    public function getDate()
+    {
+        return $this->getParameter('date');
     }
 }
