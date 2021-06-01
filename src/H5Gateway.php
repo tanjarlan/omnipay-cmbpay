@@ -6,6 +6,7 @@ namespace Omnipay\CmbPay;
 
 use Omnipay\CmbPay\Message\CreateH5OrderRequest;
 use Omnipay\CmbPay\Message\QueryPublicKeyRequest;
+use Omnipay\CmbPay\Message\QuerySingleOrderRequest;
 use Omnipay\CmbPay\Message\RefundRequest;
 use Omnipay\CmbPay\Support\BaseGateway;
 use Omnipay\CmbPay\Support\Helper;
@@ -46,9 +47,18 @@ class H5Gateway extends BaseGateway
      * @param array $options
      * @return RequestInterface
      */
-    public function refund(array $options = array())
+    public function refund(array $options = array()): RequestInterface
     {
         return $this->createRequest(RefundRequest::class, $options);
+    }
+
+    /**
+     * @param array $options
+     * @return AbstractRequest
+     */
+    public function querySingleOrder(array $options = array()): AbstractRequest
+    {
+        return $this->createRequest(QuerySingleOrderRequest::class, $options);
     }
 
     /**
